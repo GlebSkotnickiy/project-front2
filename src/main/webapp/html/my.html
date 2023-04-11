@@ -127,7 +127,7 @@
         let pagesSize = Math.ceil(tableSize / pageSize);
 
         $("button.png-btn-styled").remove();
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < pagesSize; i++) {
             let buttonTag = "<button>" + (i + 1) + "</button>";
             let btn = $(buttonTag)
                 .attr('id', "pagingButton" + i)
@@ -287,8 +287,8 @@
     function createAccount() {
         let valueName = $("#nameInput").val();
         let valueTitle = $("#titleInput").val();
-        let valueRace = $("#raceInput").val();
-        let valueProfession = $("#professionInput").val();
+        let valueRace = $("#raceInput").val().toUpperCase();
+        let valueProfession = $("#professionInput").val().toUpperCase();
         let valueLevel = $("#levelInput").val();
         let valueBirthday = $("#birthdayInput").val();
         let valueBanned = $("#bannedInput").val();
